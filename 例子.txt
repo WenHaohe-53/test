@@ -1,0 +1,263 @@
+
+HP@LAPTOP-8EEO42TH MINGW64 ~
+$ git config --global user,name "WenHaohe-53"
+error: key does not contain a section: user,name
+
+HP@LAPTOP-8EEO42TH MINGW64 ~
+$ git config --global user.name "WenHaohe-53"
+
+HP@LAPTOP-8EEO42TH MINGW64 ~
+$ git config --global user.email "1499134538@qq.com"
+
+HP@LAPTOP-8EEO42TH MINGW64 ~
+$ cd /c/Users/HP/Desktop/testDemo
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo
+$ git init
+Initialized empty Git repository in C:/Users/HP/Desktop/testDemo/.git/
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git add *
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git commit -m "本次提交的描述"
+[master (root-commit) 6a91895] 本次提交的描述
+ 2 files changed, 1 insertion(+)
+ create mode 100644 index.html
+ create mode 100644 readme.txt
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git add *
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git commit -m "修改"
+[master cbc0dd0] 修改
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git diff readme.txt
+diff --git a/readme.txt b/readme.txt
+index 914076e..4ecd865 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -1 +1 @@
+-哈哈哈哈哈啊是分不开
+\ No newline at end of file
++哈哈哈哈哈啊是分不开撒擦三次
+\ No newline at end of file
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git add *
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git commit -m "xiugai"
+[master 7c67768] xiugai
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git log
+commit 7c677682762bcbdd402a09d8c7731abe4f6fd305 (HEAD -> master)
+Author: WenHaohe-53 <1499134538@qq.com>
+Date:   Sat Apr 24 10:35:02 2021 +0800
+
+    xiugai
+
+commit cbc0dd06bd683f6996b2da5b42d6f9f01247dd51
+Author: WenHaohe-53 <1499134538@qq.com>
+Date:   Sat Apr 24 10:32:23 2021 +0800
+
+    修改
+
+commit 6a918956ac251d2300e2027a4bd42f12b8b90a18
+Author: WenHaohe-53 <1499134538@qq.com>
+Date:   Sat Apr 24 10:30:22 2021 +0800
+
+    本次提交的描述
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git reset --hard HEAD^
+HEAD is now at cbc0dd0 修改
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git log
+commit cbc0dd06bd683f6996b2da5b42d6f9f01247dd51 (HEAD -> master)
+Author: WenHaohe-53 <1499134538@qq.com>
+Date:   Sat Apr 24 10:32:23 2021 +0800
+
+    修改
+
+commit 6a918956ac251d2300e2027a4bd42f12b8b90a18
+Author: WenHaohe-53 <1499134538@qq.com>
+Date:   Sat Apr 24 10:30:22 2021 +0800
+
+    本次提交的描述
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git add *
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git commit -m "增加了文件"
+[master 8976dce] 增加了文件
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 A.txt
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git log
+commit 8976dcea1f37ecff9ec5ab6a41030a0964728525 (HEAD -> master)
+Author: WenHaohe-53 <1499134538@qq.com>
+Date:   Sat Apr 24 10:38:21 2021 +0800
+
+    增加了文件
+
+commit cbc0dd06bd683f6996b2da5b42d6f9f01247dd51
+Author: WenHaohe-53 <1499134538@qq.com>
+Date:   Sat Apr 24 10:32:23 2021 +0800
+
+    修改
+
+commit 6a918956ac251d2300e2027a4bd42f12b8b90a18
+Author: WenHaohe-53 <1499134538@qq.com>
+Date:   Sat Apr 24 10:30:22 2021 +0800
+
+    本次提交的描述
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ ^C
+
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ ^C
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git reset --hard 8976dcea1f37ecff9ec5ab6a41030a0964728525
+HEAD is now at 8976dce 增加了文件
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ ssh-keygen -t rsa -C "1499134538@qq.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/HP/.ssh/id_rsa):
+Created directory '/c/Users/HP/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/HP/.ssh/id_rsa
+Your public key has been saved in /c/Users/HP/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:PRIwAy9t+k61ofDjC+JuAghlu8cwQp1q6Bi7azL0PuI 1499134538@qq.com
+The key's randomart image is:
++---[RSA 3072]----+
+|  . o.+          |
+| .oo o +         |
+|oo... + .        |
+|=o+  +   o       |
+|*+ =o   S o      |
+|=o. o+ o + .     |
+|o.o.. * .        |
+|=+.+ = .         |
+|=E=.. +.         |
++----[SHA256]-----+
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git remote add origin https://github.com/WenHaohe-53/test.git
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git push -u origin master
+      0 [sig] bash 348! sigpacket::process: Suppressing signal 18 to win32 process (pid 7364)
+      0 [sig] sh 349! sigpacket::process: Suppressing signal 18 to win32 process (pid 12332)
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git push -u origin master
+fatal: 响应状态代码不指示成功: 401 (Unauthorized)。
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 821 bytes | 410.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/WenHaohe-53/test.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git add *
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git commit -m ""
+Aborting commit due to empty commit message.
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git commit -m "修改了内容"
+[master 899a305] 修改了内容
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git push
+fatal: unable to access 'https://github.com/WenHaohe-53/test.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git push -u origin master
+fatal: unable to access 'https://github.com/WenHaohe-53/test.git/': Failed to connect to github.com port 443: Timed out
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ ^C
+
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git remote add origin https://github.com/WenHaohe-53/test.git
+error: remote origin already exists.
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+HP@LAPTOP-8EEO42TH MINGW64 ~/Desktop/testDemo (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 334 bytes | 334.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/WenHaohe-53/test.git
+   8976dce..899a305  master -> master
+
